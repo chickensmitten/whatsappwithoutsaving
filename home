@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  
+<body style="text-align:center;">
+    <h1 style="color:green;">  
+            #WhatsappWithoutSaving  
+    </h1>
+    <h2>Whatsapp messaging without saving the number</h2>
+    <p>
+        Sometimes, you just want to Whatsapp someone without saving their number. Change the text below te get started.
+    </p>
+   
+    Name:<input type="text" id="myText" value="Phone Number Here" onchange="myFunction()">
+	<br>
+    <br>
+	<a id="demo" href="LINK GOES HERE" target="_blank" style="">Click here to start chatting</a>
+    
+    <script>
+    function myFunction() {
+        var x = document.getElementById("myText").value;
+        document.getElementById("demo").href = "https://api.whatsapp.com/send?phone=+" + x;
+        document.getElementById("demo").innerHTML = "Click here to start chatting with " + x;        
+    }
+    </script>
+</body>
+  
+</html>
