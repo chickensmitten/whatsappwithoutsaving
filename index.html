@@ -12,20 +12,20 @@
         Sometimes, you just want to Whatsapp a stranger without saving their number. Change the text below te get started.
     </p>
    
-	<input type="text" id="myText" value="65123456789" oninput="myFunction()">
+	<input type="text" id="myText" value="6512345678" oninput="myFunction()">
 	<br>
 	<small style="color:grey;">Country Code + Phone Number</small>
 	<br>
-	<p><a id="demo" href="https://api.whatsapp.com/send?phone=+65123456789" target="_blank" style="">Click here to start chatting with +65123456789</a></p>
+	<p><a id="demo" href="https://api.whatsapp.com/send?phone=+6512345678" target="_blank" style="">Click here to start chatting with +6512345678</a></p>
     
     <script>
     function myFunction() {
         var x = document.getElementById("myText").value;
 	var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-	if (isMobile) {
-        	document.getElementById("demo").href = "https://api.whatsapp.com/send?phone=+" + x;
+	if (!isMobile) {
+        	document.getElementById("demo").href = "https://web.whatsapp.com/send?phone=+" + x;
 	} else {
-		document.getElementById("demo").href = "https://web.whatsapp.com/send?phone=+" + x;
+		document.getElementById("demo").href = "https://api.whatsapp.com/send?phone=+" + x;
 	}
 
         document.getElementById("demo").innerHTML = "Click here to start chatting with +" + x;        
